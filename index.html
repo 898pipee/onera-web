@@ -771,20 +771,24 @@ form.addEventListener('submit', function(e){
     body: formData,
     headers: { 'Accept': 'application/json' }
   })
-  .then(response => {
+  .then(async response => {
     if (response.ok) {
       form.style.display = 'none';
       formSuccess.classList.add('show');
     } else {
+      const data = await response.json().catch(() => null);
+      console.error('Formspree error:', response.status, data);
       submitBtn.textContent = originalBtnText;
       submitBtn.disabled = false;
-      alert('Hubo un problema al enviar tu solicitud. Por favor intenta de nuevo.');
+      const msg = data && data.errors ? data.errors.map(e => e.message).join(', ') : ('Error ' + response.status);
+      alert('No se pudo enviar: ' + msg + '. Revisa la consola del navegador para más detalle.');
     }
   })
-  .catch(() => {
+  .catch(err => {
+    console.error('Fetch error:', err);
     submitBtn.textContent = originalBtnText;
     submitBtn.disabled = false;
-    alert('Hubo un problema al enviar tu solicitud. Por favor intenta de nuevo.');
+    alert('Hubo un problema de conexión al enviar tu solicitud. Revisa la consola del navegador (F12) para más detalle.');
   });
 });
 
