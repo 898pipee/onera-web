@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://onera.cl/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://onera.cl/servicios/growth-strategy.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://onera.cl/servicios/ai-systems.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://onera.cl/servicios/content-engine.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://onera.cl/servicios/automation.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://onera.cl/servicios/digital-presence.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://onera.cl/servicios/conversion-systems.html</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
